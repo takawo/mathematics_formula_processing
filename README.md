@@ -1,2 +1,2 @@
 # mathematics_formula_processing
-3d model from mathmatics formula.
+Processing 3D sketches inspired from mathmatics formula.
