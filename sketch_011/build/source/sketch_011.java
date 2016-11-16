@@ -12,16 +12,15 @@ import java.io.InputStream;
 import java.io.OutputStream; 
 import java.io.IOException; 
 
-public class sketch_009 extends PApplet {
+public class sketch_011 extends PApplet {
 
 /*  mathematics formula */
-//  inspired https://twitter.com/ru_sack/status/775457941969248256
-//
-//  x=u*cos(v)
-//  y=u*sin(v)
-//  z=v
-//  -2\u2266u\u22662
-//  -1pi\u2266v\u22661pi
+//  inspired https://twitter.com/i/moments/782451244178690049
+//  x=u-(u^3/3+v^2*u)
+//  y=v-(v^3/3+u^2*v)
+//  z=u^2-v^2
+//  -1\u2266u\u22661
+//  -1\u2266v\u22661
 
 // setup\u95a2\u6570 : \u521d\u56de1\u5ea6\u3060\u3051\u5b9f\u884c\u3055\u308c\u308b
 public void setup() {
@@ -33,7 +32,7 @@ public void setup() {
 
 // draw\u95a2\u6570 : setup\u95a2\u6570\u5b9f\u884c\u5f8c\u7e70\u308a\u8fd4\u3057\u5b9f\u884c\u3055\u308c\u308b
 public void draw() {
-  background(194, 97, 50);
+  background(194, 30, 30);
   translate(width/2, height/2, -500);
   rotateX(-PI/2);
   rotateY(PI/8);
@@ -42,24 +41,24 @@ public void draw() {
   stroke(54, 25, 65, 50);
   line(0, 0, -1000, 0, 0, 1000);
 
-  fill(55, 15, 94);
+  fill(140, 50, 100);
   noStroke();
-  float n = 135;
-  for (float v = -PI; v <= PI; v += PI/100) {
-    for (float u = -2; u <= 2; u += 0.10f) {
-      float x = (u*cos(v))*n;
-      float y = (u*sin(v))*n;
-      float z = (v)*n * sin(u/2 + v/2 + frameCount*0.001f);
+  float n = 400;
+  for (float v = -1; v <= 1; v += 2/200f) {
+    for (float u = -1; u <= 1; u += 2/100f) {
+      float x = (u-(pow(u, 3)/3+pow(v, 2)*u))*n;
+      float y = (v-(pow(v, 3)/3+pow(u, 2)*v))*n;
+      float z = (pow(u, 2)-pow(v, 2))*n;
       pushMatrix();
       translate(x, y, z);
-      sphere(10);
+      sphere(3);
       popMatrix();
     }
   }
 }
   public void settings() {  size(960, 540, P3D);  smooth(); }
   static public void main(String[] passedArgs) {
-    String[] appletArgs = new String[] { "sketch_009" };
+    String[] appletArgs = new String[] { "sketch_011" };
     if (passedArgs != null) {
       PApplet.main(concat(appletArgs, passedArgs));
     } else {
