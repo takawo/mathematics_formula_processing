@@ -59,7 +59,7 @@ void draw() {
   translate(width/2, height/2, -500);
 
   float n = sin(frameCount/(float)gifCount * PI);
-  float fov = map(n,-1,1,-PI/2,PI/2);  //視野角
+  float fov = map(n,-1,1,0,PI/2);  //視野角
   //perspective(視野角、縦横の比率、近い面までの距離、遠い面までの距離)
   perspective(fov, float(width)/float(height), 1.0, 10000.0);
 
