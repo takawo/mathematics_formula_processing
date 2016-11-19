@@ -7,6 +7,13 @@
 // 0≦u≦2pi
 // -1≦v≦1
 
+import gifAnimation.*;
+
+// 変数
+GifMaker gifExport;
+int gifCount = 90;
+boolean isRecord = true;
+
 // 変数uの最小値
 float minU = 0;
 // 変数uの最大値
@@ -41,6 +48,7 @@ void setup() {
   bgColor = color(199, 62, 25);
   keyColor = color(149, 15, 67);
   baseColor = color(80, 14, 86);
+  gifInit();
 }
 
 // draw関数 : setup関数実行後繰り返し実行される
@@ -49,9 +57,16 @@ void draw() {
   lights();
   ambientLight(0, 0, 20);
   translate(width/2, height/2, -500);
-  rotateX(frameCount*0.005);
-  rotateY(frameCount*0.0015);
-  rotateZ(frameCount*0.01);
+
+  float n = sin(frameCount/(float)gifCount * PI);
+  float fov = map(n,-1,1,0,PI/2);  //視野角
+  //perspective(視野角、縦横の比率、近い面までの距離、遠い面までの距離)
+  perspective(fov, float(width)/float(height), 1.0, 10000.0);
+
+  rotateX(PI/2 * cos(frameCount/(float)gifCount * TWO_PI));
+  rotateY(-PI/4 * sin(frameCount/(float)gifCount * TWO_PI));
+  rotateZ(frameCount*(TWO_PI/(float)gifCount));
+
   stroke(keyColor);
   strokeWeight(.5);
   line(0, 0, -3000, 0, 0, 3000);
@@ -69,5 +84,28 @@ void draw() {
       sphere(10);
       popMatrix();
     }
+  }
+  gifDraw();
+}
+
+void gifInit(){
+  if(isRecord == false){
+    return;
+  }
+  gifExport = new GifMaker(this, getClass().getSimpleName() +".gif"); // ファイル名のGIFアニメーションを作成
+  gifExport.setRepeat(0); // エンドレス再生
+  gifExport.setQuality(8); // クオリティ(デフォルト10)
+  gifExport.setDelay(33); // アニメーションの間隔を30ms(33fps)に
+}
+void gifDraw(){
+  if(isRecord == false){
+    return;
+  }
+  //GIFアニメーションの保存
+  if(frameCount <= gifCount){
+    gifExport.addFrame(); // フレームを追加
+  } else {
+    gifExport.finish(); // 終了してファイル保存
+    exit();
   }
 }
