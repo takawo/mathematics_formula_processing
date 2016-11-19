@@ -28,8 +28,8 @@ void draw() {
   background(50, 53, 100);
   translate(width/2, height/2, -500);
   rotateX(PI/2);
-  rotateY(PI/8+frameCount*0.0001);
-  rotateZ(frameCount*0.05);
+  rotateY(map(sin(frameCount*(TWO_PI/(float)gifCount)),-1,1,PI/6,-PI/6));
+  rotateZ(frameCount*(TWO_PI/(float)gifCount));
   lights();
   stroke(20, 100, 100, 50);
   line(0, 0, -1000, 0, 0, 1000);
@@ -66,5 +66,6 @@ void gifDraw(){
     gifExport.addFrame(); // フレームを追加
   } else {
     gifExport.finish(); // 終了してファイル保存
+    exit();
   }
 }

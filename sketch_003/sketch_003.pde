@@ -25,13 +25,13 @@ void setup() {
 
 // draw関数 : setup関数実行後繰り返し実行される
 void draw() {
-  background(0, 0, 100);
+  background(21, 100, 35);
   translate(width/2, height/2, -700);
   lights();
-  ambientLight(0,0,100);
+  ambientLight(48,42,99);
   rotateX(-PI/8);
   rotateY(frameCount*(TWO_PI/(float)gifCount));
-  stroke(0,0,0);
+  stroke(81,50,80);
   float n = 30;
   for (float v = 0; v <= 20; v += .1) {
     for (float u = 0; u <= TWO_PI; u += TWO_PI/360) {
@@ -62,5 +62,6 @@ void gifDraw(){
     gifExport.addFrame(); // フレームを追加
   } else {
     gifExport.finish(); // 終了してファイル保存
+    exit();
   }
 }

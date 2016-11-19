@@ -27,9 +27,9 @@ void setup() {
 void draw() {
   background(184,100,20);
   translate(width/2, height/2, -500);
-  rotateX(PI/2);
+  rotateX(-frameCount*(TWO_PI/(float)gifCount));
   rotateY(PI/6);
-  rotateZ(frameCount*0.01);
+  rotateZ(-frameCount*(PI/(float)gifCount));
   lights();
   fill(347,65,78);
   noStroke();
@@ -63,5 +63,6 @@ void gifDraw(){
     gifExport.addFrame(); // フレームを追加
   } else {
     gifExport.finish(); // 終了してファイル保存
+    exit();
   }
 }

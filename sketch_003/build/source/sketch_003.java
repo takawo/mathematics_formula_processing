@@ -43,13 +43,13 @@ public void setup() {
 
 // draw\u95a2\u6570 : setup\u95a2\u6570\u5b9f\u884c\u5f8c\u7e70\u308a\u8fd4\u3057\u5b9f\u884c\u3055\u308c\u308b
 public void draw() {
-  background(0, 0, 100);
+  background(21, 100, 35);
   translate(width/2, height/2, -700);
   lights();
-  ambientLight(0,0,100);
+  ambientLight(48,42,99);
   rotateX(-PI/8);
   rotateY(frameCount*(TWO_PI/(float)gifCount));
-  stroke(0,0,0);
+  stroke(81,50,80);
   float n = 30;
   for (float v = 0; v <= 20; v += .1f) {
     for (float u = 0; u <= TWO_PI; u += TWO_PI/360) {

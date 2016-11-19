@@ -46,8 +46,8 @@ public void draw() {
   background(50, 53, 100);
   translate(width/2, height/2, -500);
   rotateX(PI/2);
-  rotateY(PI/8+frameCount*0.0001f);
-  rotateZ(frameCount*0.05f);
+  rotateY(map(sin(frameCount*(TWO_PI/(float)gifCount)),-1,1,PI/6,-PI/6));
+  rotateZ(frameCount*(TWO_PI/(float)gifCount));
   lights();
   stroke(20, 100, 100, 50);
   line(0, 0, -1000, 0, 0, 1000);
@@ -84,6 +84,7 @@ public void gifDraw(){
     gifExport.addFrame(); // \u30d5\u30ec\u30fc\u30e0\u3092\u8ffd\u52a0
   } else {
     gifExport.finish(); // \u7d42\u4e86\u3057\u3066\u30d5\u30a1\u30a4\u30eb\u4fdd\u5b58
+    exit();
   }
 }
   public void settings() {  size(960, 540, P3D);  smooth(); }
