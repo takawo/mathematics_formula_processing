@@ -1,6 +1,6 @@
-# mathematics\_formula\_processing
+# Mathematics Formula / Processing
 
-Processing 3D sketches inspired from mathmatics formula.
+3D models from mathmatics formula, built with Processing(P5).
 
 ![sketch_000/sketch_000.gif](sketch_000/sketch_000.gif)
 ![sketch_001/sketch_001.gif](sketch_001/sketch_001.gif)
