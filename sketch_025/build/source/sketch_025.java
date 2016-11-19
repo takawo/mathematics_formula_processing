@@ -82,6 +82,7 @@ public void draw() {
   //perspective(\u8996\u91ce\u89d2\u3001\u7e26\u6a2a\u306e\u6bd4\u7387\u3001\u8fd1\u3044\u9762\u307e\u3067\u306e\u8ddd\u96e2\u3001\u9060\u3044\u9762\u307e\u3067\u306e\u8ddd\u96e2)
   perspective(fov, PApplet.parseFloat(width)/PApplet.parseFloat(height), 1.0f, 10000.0f);
 
+
   rotateX(frameCount*(TWO_PI/(float)gifCount));
   rotateY(-frameCount*(TWO_PI/(float)gifCount));
   rotateZ(frameCount*(TWO_PI/(float)gifCount));
@@ -92,16 +93,17 @@ public void draw() {
   noFill();
   fill(baseColor);
   noStroke();
-
+  float t = 0;
   for (float v = minV; v <= maxV; v += stepV) {
     for (float u = minU; u <= maxU; u += stepU) {
-      float x = pow((cos(3 * u) * cos(v)),3) * scale;
-      float y = pow((sin(u) * cos(v)),3) * scale;
-      float z = pow(sin(v),3) * scale;
+      float x = pow((cos(3  * (u+t)) * cos(v+t)),3) * scale;
+      float y = pow((sin(u+t) * cos(v+t)),3) * scale;
+      float z = pow(sin(v+t),3) * scale;
       pushMatrix();
       translate(x, y, z);
       sphere(3);
       popMatrix();
+      t += .1f;
     }
   }
   gifDraw();

@@ -60,9 +60,10 @@ void draw() {
   translate(width/2, height/2, -500);
 
   float n = sin(frameCount/(float)gifCount * PI);
-  float fov = map(n,-1,1,0 .2,0.8);  //視野角
+  float fov = map(n,-1,1,0.2,0.8);  //視野角
   //perspective(視野角、縦横の比率、近い面までの距離、遠い面までの距離)
   perspective(fov, float(width)/float(height), 1.0, 10000.0);
+
 
   rotateX(frameCount*(TWO_PI/(float)gifCount));
   rotateY(-frameCount*(TWO_PI/(float)gifCount));
@@ -74,16 +75,17 @@ void draw() {
   noFill();
   fill(baseColor);
   noStroke();
-
+  float t = 0;
   for (float v = minV; v <= maxV; v += stepV) {
     for (float u = minU; u <= maxU; u += stepU) {
-      float x = pow((cos(3 * u) * cos(v)),3) * scale;
-      float y = pow((sin(u) * cos(v)),3) * scale;
-      float z = pow(sin(v),3) * scale;
+      float x = pow((cos(3  * (u+t)) * cos(v+t)),3) * scale;
+      float y = pow((sin(u+t) * cos(v+t)),3) * scale;
+      float z = pow(sin(v+t),3) * scale;
       pushMatrix();
       translate(x, y, z);
       sphere(3);
       popMatrix();
+      t += .1;
     }
   }
   gifDraw();
