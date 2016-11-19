@@ -28,8 +28,8 @@ void draw() {
   background(194, 97, 50);
   translate(width/2, height/2, -500);
   rotateX(-PI/2);
-  rotateY(PI/8);
-  rotateZ(frameCount*0.01);
+  rotateY(map(sin(frameCount*(TWO_PI/(float)gifCount)),-1,1,PI/8+PI/8,PI/8-PI/8));
+  rotateZ(frameCount*(TWO_PI/(float)gifCount));
   lights();
   stroke(54, 25, 65, 50);
   line(0, 0, -1000, 0, 0, 1000);

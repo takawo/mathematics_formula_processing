@@ -46,7 +46,7 @@ public void draw() {
   background(50, 53, 100);
   translate(width/2, height/2, -500);
   rotateX(PI/2);
-  rotateY(map(sin(frameCount*(TWO_PI/(float)gifCount)),-1,1,PI/6,-PI/6));
+  rotateY(map(sin(frameCount*(TWO_PI/(float)gifCount)),-1,1,PI/4,0));
   rotateZ(frameCount*(TWO_PI/(float)gifCount));
   lights();
   stroke(20, 100, 100, 50);
