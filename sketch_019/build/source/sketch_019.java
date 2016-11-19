@@ -77,11 +77,11 @@ public void draw() {
   translate(width/2, height/2, -500);
 
   float n = sin(frameCount/(float)gifCount * PI);
-  float fov = map(n,-1,1,0,PI/2);  //\u8996\u91ce\u89d2
+  float fov = map(n,-1,1,-PI/2,PI/2);  //\u8996\u91ce\u89d2
   //perspective(\u8996\u91ce\u89d2\u3001\u7e26\u6a2a\u306e\u6bd4\u7387\u3001\u8fd1\u3044\u9762\u307e\u3067\u306e\u8ddd\u96e2\u3001\u9060\u3044\u9762\u307e\u3067\u306e\u8ddd\u96e2)
   perspective(fov, PApplet.parseFloat(width)/PApplet.parseFloat(height), 1.0f, 10000.0f);
 
-  rotateX(PI/2 * cos(frameCount/(float)gifCount * TWO_PI));
+  rotateX(PI/2);
   rotateY(-PI/4 * sin(frameCount/(float)gifCount * TWO_PI));
   rotateZ(frameCount*(TWO_PI/(float)gifCount));
 
