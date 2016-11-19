@@ -29,8 +29,8 @@ void draw() {
   float r = 100;
   float R = 250;
   translate(width/2, height/2, -500);
-  rotateX(frameCount*0.01);
-  rotateZ(frameCount*0.01);
+  rotateX(frameCount*(PI/(float)gifCount));
+  rotateZ(frameCount*(PI/(float)gifCount));
   fill(192,2,95);
   noStroke();
   for (float v = 0; v <= TWO_PI; v += TWO_PI/20) {

@@ -47,8 +47,8 @@ public void draw() {
   float r = 100;
   float R = 250;
   translate(width/2, height/2, -500);
-  rotateX(frameCount*0.01f);
-  rotateZ(frameCount*0.01f);
+  rotateX(frameCount*(PI/(float)gifCount));
+  rotateZ(frameCount*(PI/(float)gifCount));
   fill(192,2,95);
   noStroke();
   for (float v = 0; v <= TWO_PI; v += TWO_PI/20) {
@@ -78,10 +78,10 @@ public void gifDraw(){
   //GIF\u30a2\u30cb\u30e1\u30fc\u30b7\u30e7\u30f3\u306e\u4fdd\u5b58
   if(frameCount <= gifCount){
     gifExport.addFrame(); // \u30d5\u30ec\u30fc\u30e0\u3092\u8ffd\u52a0
-    } else {
-      gifExport.finish(); // \u7d42\u4e86\u3057\u3066\u30d5\u30a1\u30a4\u30eb\u4fdd\u5b58
-    }
+  } else {
+    gifExport.finish(); // \u7d42\u4e86\u3057\u3066\u30d5\u30a1\u30a4\u30eb\u4fdd\u5b58
   }
+}
   public void settings() {  size(960, 540, P3D);  smooth(); }
   static public void main(String[] passedArgs) {
     String[] appletArgs = new String[] { "sketch_000" };
