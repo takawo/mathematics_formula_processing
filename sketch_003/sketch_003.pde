@@ -7,6 +7,12 @@
 //  0≦u≦1
 //  0≦v≦1
 
+import gifAnimation.*;
+
+// 変数
+GifMaker gifExport;
+int gifCount = 90;
+boolean isRecord = true;
 
 // setup関数 : 初回1度だけ実行される
 void setup() {
@@ -37,4 +43,20 @@ void draw() {
       popMatrix();
     }
   }
+  gifDraw();
 }
+
+void gifInit(){
+  gifExport = new GifMaker(this, getClass().getSimpleName() +".gif"); // ファイル名のGIFアニメーションを作成
+  gifExport.setRepeat(0); // エンドレス再生
+  gifExport.setQuality(8); // クオリティ(デフォルト10)
+  gifExport.setDelay(33); // アニメーションの間隔を30ms(33fps)に
+}
+void gifDraw(){
+  //GIFアニメーションの保存
+  if(frameCount <= gifCount){
+    gifExport.addFrame(); // フレームを追加
+    } else {
+      gifExport.finish(); // 終了してファイル保存
+    }
+  }

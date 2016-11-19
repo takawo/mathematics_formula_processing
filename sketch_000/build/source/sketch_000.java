@@ -30,6 +30,7 @@ public class sketch_000 extends PApplet {
 // \u5909\u6570
 GifMaker gifExport;
 int gifCount = 90;
+boolean isRecord = true;
 
 // setup\u95a2\u6570 : \u521d\u56de1\u5ea6\u3060\u3051\u5b9f\u884c\u3055\u308c\u308b
 public void setup() {
@@ -71,8 +72,9 @@ public void gifInit(){
   gifExport.setDelay(33); // \u30a2\u30cb\u30e1\u30fc\u30b7\u30e7\u30f3\u306e\u9593\u9694\u309230ms(33fps)\u306b
 }
 public void gifDraw(){
-  gifExport.addFrame();
-
+  if(isRecord == false){
+    return;
+  }
   //GIF\u30a2\u30cb\u30e1\u30fc\u30b7\u30e7\u30f3\u306e\u4fdd\u5b58
   if(frameCount <= gifCount){
     gifExport.addFrame(); // \u30d5\u30ec\u30fc\u30e0\u3092\u8ffd\u52a0

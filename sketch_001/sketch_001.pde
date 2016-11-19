@@ -12,6 +12,7 @@ import gifAnimation.*;
 // 変数
 GifMaker gifExport;
 int gifCount = 90;
+boolean isRecord = true;
 
 // setup関数 : 初回1度だけ実行される
 void setup() {
@@ -55,12 +56,13 @@ void gifInit(){
   gifExport.setDelay(33); // アニメーションの間隔を30ms(33fps)に
 }
 void gifDraw(){
-  gifExport.addFrame();
-
+  if(isRecord == false){
+    return;
+  }
   //GIFアニメーションの保存
   if(frameCount <= gifCount){
     gifExport.addFrame(); // フレームを追加
-    } else {
-      gifExport.finish(); // 終了してファイル保存
-    }
+  } else {
+    gifExport.finish(); // 終了してファイル保存
   }
+}
