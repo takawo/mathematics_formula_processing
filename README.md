@@ -22,4 +22,8 @@
 ![sketch_017/sketch_017.gif](sketch_017/sketch_017.gif)
 ![sketch_018/sketch_018.gif](sketch_018/sketch_018.gif)
 ![sketch_019/sketch_019.gif](sketch_019/sketch_019.gif)
-
+![sketch_020/sketch_020.gif](sketch_020/sketch_020.gif)
+![sketch_021/sketch_021.gif](sketch_021/sketch_021.gif)
+![sketch_022/sketch_022.gif](sketch_022/sketch_022.gif)
+![sketch_023/sketch_023.gif](sketch_023/sketch_023.gif)
+![sketch_024/sketch_024.gif](sketch_024/sketch_024.gif)
