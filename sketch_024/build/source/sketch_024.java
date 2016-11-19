@@ -63,8 +63,8 @@ public void setup() {
   sphereDetail(0);
 
   bgColor = color(351, 80, 92);
-  keyColor = color(145, 8, 93);
-  baseColor = color(226, 26, 57);
+  keyColor = color(226, 26, 57);
+  baseColor = color(145, 8, 93);
 
   gifInit();
 }
