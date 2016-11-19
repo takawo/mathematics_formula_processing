@@ -31,8 +31,8 @@ void draw() {
   lights();
   ambientLight(0,0,100);
   translate(width/2, height/2, -500);
-  rotateY(frameCount*0.01);
-  rotateX(frameCount*0.015);
+  rotateY(frameCount*(TWO_PI/(float)gifCount));
+  rotateX(frameCount*(TWO_PI/(float)gifCount));
   float n = 100;
   for (float u = -40; u<=-1; u += 39f/400f) {
     for (float v = 0; v <= TWO_PI; v += TWO_PI/20) {
