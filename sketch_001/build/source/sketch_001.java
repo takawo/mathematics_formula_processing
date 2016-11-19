@@ -49,7 +49,7 @@ public void draw() {
   translate(width/2, height/2, -500);
   lights();
   rotateY(PI/2);
-  rotateZ(frameCount*0.01f);
+  rotateZ(frameCount*(TWO_PI/(float)gifCount));
   fill(192,2,95);
   noStroke();
   float n = 100;
