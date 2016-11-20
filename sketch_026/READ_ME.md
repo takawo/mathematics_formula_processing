@@ -1,0 +1,1 @@
+![sketch_026.gif](sketch_026.gif)
