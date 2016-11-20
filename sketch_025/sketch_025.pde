@@ -75,7 +75,6 @@ void draw() {
   noFill();
   fill(baseColor);
   noStroke();
-  float t = 0;
   for (float v = minV; v <= maxV; v += stepV) {
     for (float u = minU; u <= maxU; u += stepU) {
       float x = pow((cos(3  * (u+t)) * cos(v+t)),3) * scale;
@@ -85,7 +84,6 @@ void draw() {
       translate(x, y, z);
       sphere(3);
       popMatrix();
-      t += .1;
     }
   }
   gifDraw();
