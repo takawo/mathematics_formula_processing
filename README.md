@@ -9,7 +9,7 @@
 * [index020-029](index020-029.md)
 * [index030-039](index030-039.md)
 
-### Samples Selected
+### Samples
 
 ![sketch_008/sketch_008.gif](sketch_008/sketch_008.gif)
 ![sketch_027/sketch_027.gif](sketch_027/sketch_027.gif)
