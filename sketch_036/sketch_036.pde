@@ -23,7 +23,7 @@ float minV = 0;
 // 変数vの最大値
 float maxV = TWO_PI;
 // 分割数
-float div = 50;
+float div = 400;
 
 // u,vの増加ステップ
 float stepU = abs(maxU - minU)/div;
@@ -66,7 +66,7 @@ void draw() {
    perspective(fov, float(width)/float(height), 1.0, 10000.0);
 
 
-  rotateX(1.00 + map(n,-1,1,-1,0));
+  rotateX(1.50 + map(n,-1,1,-1,0));
   rotateY(0.00);
   rotateZ(frameCount/(float)gifCount * TWO_PI);
 
