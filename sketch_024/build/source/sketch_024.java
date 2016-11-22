@@ -29,7 +29,8 @@ public class sketch_024 extends PApplet {
 // \u5909\u6570
 GifMaker gifExport;
 int gifCount = 90;
-boolean isRecord = true;
+boolean isRecord = false;
+
 
 // \u5909\u6570u\u306e\u6700\u5c0f\u5024
 float minU = -PI/2;

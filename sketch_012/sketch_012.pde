@@ -12,7 +12,8 @@ import gifAnimation.*;
 // 変数
 GifMaker gifExport;
 int gifCount = 90;
-boolean isRecord = true;
+boolean isRecord = false;
+
 
 void setup() {
   size(960, 540, P3D); // ウィンドウサイズを960px,540pxに

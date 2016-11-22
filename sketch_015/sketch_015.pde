@@ -12,7 +12,8 @@ import gifAnimation.*;
 // 変数
 GifMaker gifExport;
 int gifCount = 90;
-boolean isRecord = true;
+boolean isRecord = false;
+
 
 // 変数uの最小値
 float minU = -PI;

@@ -14,7 +14,8 @@ import gifAnimation.*;
 // 変数
 GifMaker gifExport;
 int gifCount = 90;
-boolean isRecord = true;
+boolean isRecord = false;
+
 
 // setup関数 : 初回1度だけ実行される
 void setup() {

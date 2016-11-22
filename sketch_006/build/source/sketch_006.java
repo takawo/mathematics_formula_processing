@@ -30,7 +30,8 @@ public class sketch_006 extends PApplet {
 // \u5909\u6570
 GifMaker gifExport;
 int gifCount = 90;
-boolean isRecord = true;
+boolean isRecord = false;
+
 
 // setup\u95a2\u6570 : \u521d\u56de1\u5ea6\u3060\u3051\u5b9f\u884c\u3055\u308c\u308b
 public void setup() {
