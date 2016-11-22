@@ -11,13 +11,13 @@
 
 ### Samples
 
-![sketch_008/sketch_008.gif](sketch_008/sketch_008.gif)
-![sketch_027/sketch_027.gif](sketch_027/sketch_027.gif)
-![sketch_009/sketch_009.gif](sketch_009/sketch_009.gif)
-![sketch_000/sketch_000.gif](sketch_000/sketch_000.gif)
-![sketch_016/sketch_016.gif](sketch_016/sketch_016.gif)
-![sketch_001/sketch_001.gif](sketch_001/sketch_001.gif)
-![sketch_029/sketch_029.gif](sketch_029/sketch_029.gif)
-![sketch_002/sketch_002.gif](sketch_002/sketch_002.gif)
-![sketch_026/sketch_026.gif](sketch_026/sketch_026.gif)
-![sketch_012/sketch_012.gif](sketch_012/sketch_012.gif)
+![sketches/sketch_008/sketch_008.gif](sketches/sketch_008/sketch_008.gif)
+![sketches/sketch_027/sketch_027.gif](sketches/sketch_027/sketch_027.gif)
+![sketches/sketch_009/sketch_009.gif](sketches/sketch_009/sketch_009.gif)
+![sketches/sketch_000/sketch_000.gif](sketches/sketch_000/sketch_000.gif)
+![sketches/sketch_016/sketch_016.gif](sketches/sketch_016/sketch_016.gif)
+![sketches/sketch_001/sketch_001.gif](sketches/sketch_001/sketch_001.gif)
+![sketches/sketch_029/sketch_029.gif](sketches/sketch_029/sketch_029.gif)
+![sketches/sketch_002/sketch_002.gif](sketches/sketch_002/sketch_002.gif)
+![sketches/sketch_026/sketch_026.gif](sketches/sketch_026/sketch_026.gif)
+![sketches/sketch_012/sketch_012.gif](sketches/sketch_012/sketch_012.gif)
