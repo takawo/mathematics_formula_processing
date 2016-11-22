@@ -64,9 +64,9 @@ public void setup() {
   //hint(ENABLE_DEPTH_SORT);
   sphereDetail(0);
 
-  bgColor = color(50, 70, 69);
-  keyColor = color(316, 50, 91);
-  baseColor = color(180, 60, 89);
+  bgColor = color(126, 65, 100);
+  keyColor = color(0, 87, 100);
+  baseColor = color(33, 30, 100);
 
   gifInit();
 }
