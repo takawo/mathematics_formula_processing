@@ -1,5 +1,5 @@
 /*  mathematics formula */
-//  inspired https://twitter.com/ru_sack/status/788162503620517888
+//  inspired https://twitter.com/ru_sack/status/788484631666397184
 //
 // x=(cos(u)-cos(2u))*cos(v)/4
 // y=(sin(u)-sin(2u))*sin(v)/4
@@ -71,7 +71,7 @@ void draw() {
   minU = map(n,-1,1,-2,-4);
 
   rotateX(frameCount*(TWO_PI/(float)gifCount));
-  rotateY(PI + map(sin(frameCount/(float)gifCount * TWO_PI), -1, 1, -PI/4, PI/4));
+  rotateY(-PI - map(sin(frameCount/(float)gifCount * TWO_PI), -1, 1, -PI/4, PI/4));
   rotateZ(map(sin(frameCount/(float)gifCount * TWO_PI), -1, 1, -PI/2, PI/2));
 
   stroke(keyColor);
