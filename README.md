@@ -2,6 +2,11 @@
 
 3D models from mathmatics formula, built with Processing(P5).
 
+# reference: 
+
+* 瑞慶山 香佳，数学デッサン教室 ― 描いて楽しむ数学のかたち,
+* https://www.amazon.co.jp/dp/4297102781/
+
 ### Samples Index (Gif Animation)
 
 * [index000-009](index000-009.md)
