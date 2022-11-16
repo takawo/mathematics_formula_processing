@@ -4,7 +4,7 @@
 
 # reference: 
 
-* 瑞慶山 香佳，数学デッサン教室 ― 描いて楽しむ数学のかたち,
+* 瑞慶山 香佳，数学デッサン教室 ― 描いて楽しむ数学のかたち,技術評論社，2019
 * https://www.amazon.co.jp/dp/4297102781/
 
 ### Samples Index (Gif Animation)
